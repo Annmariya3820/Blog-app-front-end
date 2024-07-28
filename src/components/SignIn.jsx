@@ -32,13 +32,14 @@ const SignIn = () => {
                 else{
 
                     let token = response.data.token
-                    let userId = response.userId
+                    let userId = response.data.userId
                     console.log(userId)
                     console.log(token)
-
-                    sessionStorage.setItem("userId",userId)
+          
                     sessionStorage.setItem("token",token)
 
+                    sessionStorage.setItem("userId",userId)
+                    
                     navigate("/create")
                 }
               }
